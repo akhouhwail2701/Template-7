@@ -1,0 +1,172 @@
+@use "Global.scss";
+
+.content-content {
+    padding: 8% 4%;
+
+    .parent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .child1 {
+            width: 45%;
+            height: 120%;
+            background-color: #fff;
+            border-radius: 20px;
+
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 2%;
+                margin-bottom: 4%;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            >div {
+                margin-top: 8%;
+                width: 100%;
+                height: 60%;
+                background-color: #a2afa0;
+            }
+
+        }
+
+        .child2 {
+            width: 50%;
+            height: 100%;
+
+            form {
+                width: 100%;
+                height: 100%;
+
+                label {
+                    font-size: 25px;
+                    text-transform: capitalize;
+                    color: #fff;
+                }
+
+                input[type="text"] {
+                    width: 100%;
+                    height: 10%;
+                    font-family: cursive;
+                    font-size: 15px;
+                    padding-left: 5%;
+                    border-radius: 8px;
+                    border: none;
+
+                    margin: {
+                        top: 2%;
+                        bottom: 2%;
+                    }
+
+                    &::placeholder {
+                        text-transform: capitalize;
+                    }
+                }
+
+                input[type="email"] {
+                    width: 100%;
+                    height: 10%;
+                    font-family: cursive;
+                    font-size: 15px;
+                    padding-left: 5%;
+                    border-radius: 8px;
+                    border: none;
+
+                    margin: {
+                        top: 2%;
+                        bottom: 2%;
+                    }
+
+                    &::placeholder {
+                        text-transform: capitalize;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 25%;
+                    border-radius: 8px;
+                    border: none;
+                    padding: 5%;
+                }
+
+                input[type="submit"] {
+                    width: 35%;
+                    height: 12%;
+                    border-radius: 8px;
+                    border: none;
+                    margin-top: 4%;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    font-family: cursive;
+
+                    &:hover {
+                        background-color: sandybrown;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:767px) {
+        .parent {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .child1 {
+                width: 100%;
+                height: 40%;
+
+                h1 {
+                    font-size: 15px;
+
+                    margin: {
+                        top: 1%;
+                        bottom: 1%;
+                    }
+                }
+
+                p {
+                    font-size: 12px;
+
+                    margin: {
+                        top: 1%;
+                        bottom: 1%;
+                    }
+                }
+
+                >div {
+                    margin-top: 4%;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                }
+
+            }
+
+            .child2 {
+                width: 100%;
+                height: 60%;
+
+                form {
+                    label {
+                        font-size: 18px;
+                    }
+
+                    input[type="submit"] {
+                        width: 25%;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

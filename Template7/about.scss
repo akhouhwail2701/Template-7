@@ -1,0 +1,41 @@
+@use "Global.scss";
+
+.content-content {
+    padding: 2% 5%;
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 5%;
+    }
+
+    p {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    button {
+        width: 20%;
+        height: 10%;
+        text-transform: uppercase;
+        font-family: cursive;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: sandybrown;
+        }
+    }
+
+    @media (max-width:767px) {
+        h2 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,222 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin shadow() {
+    box-shadow: 0px 0px 10px black;
+}
+
+@mixin corner() {
+    border-radius: 10px;
+}
+
+.landing-page {
+    width: 100%;
+    height: 100vh;
+
+    >img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        filter: blur(5px);
+    }
+
+    .BackGround {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding: 2% 10%;
+
+        .side-bar {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            @include shadow();
+            @include corner();
+
+            padding: {
+                left: 5%;
+                right: 5%;
+            }
+
+            h1 {
+                font-size: 40px;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            .links {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+
+                ul {
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    li {
+                        a {
+                            color: #000;
+                            text-transform: capitalize;
+                            font-size: 15px;
+
+                            &:hover {
+                                color: #fff;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    width: 10%;
+                    height: 100%;
+                    display: none;
+                }
+            }
+
+            @media (max-width:767px) {
+                h1 {
+                    font-size: 20px;
+                }
+
+                .links {
+                    ul {
+                        display: none;
+                    }
+
+                    img {
+                        display: block;
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        #menu {
+            width: 80%;
+            height: 40%;
+            position: absolute;
+            z-index: 2;
+            background-color: #fff;
+            margin-top: 2%;
+            border-radius: 2%;
+            visibility: hidden;
+
+            ul {
+                li {
+                    text-align: center;
+
+                    &:active {
+                        background-color: #000;
+                    }
+
+                    &:active a {
+                        color: #fff;
+                    }
+
+                    a {
+                        text-transform: capitalize;
+                        color: #000;
+                    }
+
+                    padding: {
+                        top: 3%;
+                        bottom: 3%;
+                    }
+
+                }
+            }
+        }
+
+        .content-landing {
+            width: 100%;
+            height: 80%;
+            margin-top: 2%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .content {
+                position: relative;
+                width: 85%;
+                height: 100%;
+                @include shadow();
+                @include corner();
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .content-content {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+            }
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 8%;
+                height: 100%;
+                @include shadow();
+                @include corner();
+
+                img {
+                    transition: 0.25s;
+
+                    &:hover {
+                        transform: scale(0.7);
+                        color: #fff;
+                        background-color: #fff;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            @media (max-width:767px) {
+                flex-direction: column;
+
+                .content {
+                    width: 100%;
+                    height: 80%;
+                }
+
+                .icons {
+                    width: 100%;
+                    height: 10%;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
